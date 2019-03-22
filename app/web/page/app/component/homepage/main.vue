@@ -139,6 +139,8 @@ export default {
           name: 'ownspace_index'
         });
       } else if (name === 'loginout') {
+        Cookies.set('edgar-user', 'superadmin', -1);
+        Cookies.set('edgar-password', '123456', -1);
         // 退出登录
         this.$axios.post('/logout').then(res => {
           this.$store.commit('logout', this);

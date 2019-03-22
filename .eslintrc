@@ -27,6 +27,13 @@
         "arrays": "only-multiline",
         "objects": "only-multiline"
       }
+    ],
+    "indent": [
+      "error",
+      4,
+      {
+          "SwitchCase": 1
+      }
     ]
   },
   "env": {

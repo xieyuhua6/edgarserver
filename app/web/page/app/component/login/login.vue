@@ -134,12 +134,16 @@ export default {
     },
     handleSubmit(e) {
       e.preventDefault();
-      Cookies.set('edgar-user', 'superadmin');
-      Cookies.set('edgar-password', '123456');
+      // Cookies.set('edgar-user', 'superadmin');
+      // Cookies.set('edgar-password', '123456');
       this.$store.commit('setToken', '123456');
-      this.$store.commit('setAvator', 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png');
-      this.$router.push({
-        name: 'home_index'
+      // this.$store.commit('setAvator', 'https://gw.alipayobjects.com/zos/rmsportal/BiazfanxmamNRoxxVxka.png');
+      // this.$router.push({
+      //   name: 'home_index'
+      // });
+      this.$axios.post(`${uri}/users/loginAction`, {tel: this.form.username}).then(response => {
+        this.captchaSvg = response.data;
+        console.log(captchaSvg);
       });
     },
     register() {

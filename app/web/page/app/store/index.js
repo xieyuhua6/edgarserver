@@ -13,14 +13,14 @@ import user from './modules/user';
 Vue.use(Vuex);
 
 const modules = {
-  app,
-  user
+    app,
+    user
 };
 
 export default new Vuex.Store({
-  state,
-  actions,
-  getters,
-  mutations,
-  modules
+    state,
+    actions,
+    getters,
+    mutations,
+    modules
 });
